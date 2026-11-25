@@ -1,0 +1,7 @@
+Restaurant Policy | Goodgrain fictional restaurant | Version 1 | Effective 2026-01-01
+
+Orders may be cancelled while the order is confirmed and before preparation begins. Once the kitchen changes the order to PREPARING, cancellation is no longer available through the application.
+
+Menu availability reflects the number of portions currently recorded by the demo kitchen. Availability can change before an order is submitted, and the application rechecks stock at checkout.
+
+All transactions are simulated for this learning project. No payment is collected and no delivery provider is contacted.

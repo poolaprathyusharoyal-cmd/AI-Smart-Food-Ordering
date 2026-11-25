@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171a16">
+  <title>Goodgrain | Food, thoughtfully ordered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark">g.</span><span>goodgrain<span class="brand-dot">.</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#menu">Menu</a><a href="#orders">Your orders</a><button id="open-chat" class="nav-chat"><span class="spark">✳</span> Ask our assistant</button>
+    </nav>
+    <div id="auth-area" class="auth-area"><button id="login-open" class="button button-dark">Sign in</button></div>
+  </header>
+
+  <main>
+    <section class="intro-band">
+      <div class="intro-copy"><p class="eyebrow">A GOOD DAY STARTS HERE</p><h1>Real food.<br><em>Really good.</em></h1><p class="intro-sub">Made fresh, delivered with care. Find your next favorite from our kitchen.</p><a class="intro-link" href="#menu">Explore today's menu <span>↓</span></a></div>
+      <div class="intro-image" role="img" aria-label="Freshly plated Indian meal"><span class="image-caption"><span class="live-dot"></span> COOKED FRESH, EVERY DAY</span></div>
+      <div class="intro-stamp"><span>GOOD<br>FOOD<br>MOOD</span><span class="stamp-star">✳</span></div>
+    </section>
+
+    <section id="menu" class="menu-section">
+      <div class="section-heading"><div><p class="eyebrow">FROM OUR KITCHEN</p><h2>Find your plate</h2></div><p class="section-note">A little comfort, a lot of flavor.</p></div>
+      <div class="menu-toolbar">
+        <div id="category-filters" class="category-filters" aria-label="Filter by category"></div>
+        <div class="filter-right"><label class="veg-filter"><input id="veg-only" type="checkbox"><span class="veg-icon"></span> Veg only</label><label class="price-filter" for="max-price">Under <span>₹</span><input id="max-price" type="number" min="1" placeholder="Any price"></label><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search the menu" aria-label="Search menu"></label></div>
+      </div>
+      <p id="catalog-status" class="status-line" role="status"></p>
+      <div class="shop-layout"><div id="menu-grid" class="menu-grid" aria-live="polite"></div>
+        <aside class="order-panel"><div class="panel-title"><div><p class="eyebrow">YOUR SELECTION</p><h3>Your order</h3></div><span id="cart-count" class="count-badge">0</span></div><div id="cart-lines" class="cart-lines"><p class="empty-cart">Your next favorite goes here.</p></div><div class="cart-footer"><div class="total-row"><span>Subtotal</span><strong id="cart-total">₹0</strong></div><button id="checkout" class="button button-lime button-wide" disabled>Place order <span>↗</span></button><p id="order-status" class="order-feedback" role="status"></p><p class="micro-copy">Payment is simulated for this demo.</p></div></aside>
+      </div>
+    </section>
+
+    <section id="orders" class="orders-section"><div class="section-heading"><div><p class="eyebrow">MADE WITH YOU IN MIND</p><h2>Your orders</h2></div><button id="refresh-orders" class="text-button">Refresh <span>↻</span></button></div><div id="orders-list" class="orders-list"><p class="quiet-empty">Sign in to see your order history.</p></div></section>
+
+    <section id="admin-panel" class="admin-section" hidden><div class="section-heading"><div><p class="eyebrow">KITCHEN CONSOLE</p><h2>Menu management</h2></div></div><form id="menu-form" class="menu-form"><input name="name" placeholder="Item name" required minlength="3"><input name="category" placeholder="Category" required><input name="price" type="number" min="0.01" step="0.01" placeholder="Price (₹)" required><input name="portions" type="number" min="0" placeholder="Portions" required><input name="description" placeholder="Short description"><label class="veg-filter"><input name="is_vegetarian" type="checkbox" checked><span class="veg-icon"></span> Vegetarian</label><button class="button button-dark">Add menu item</button></form><form id="document-form" class="document-form"><label for="knowledge-file">Knowledge document</label><input id="knowledge-file" name="file" type="file" accept=".pdf,.docx,.txt" required><button class="button button-lime">Upload and index</button><span id="document-status" role="status"></span></form></section>
+  </main>
+
+  <aside id="chat-drawer" class="chat-drawer" aria-label="Restaurant assistant" aria-hidden="true"><div class="chat-head"><div class="assistant-avatar">✳</div><div><p class="eyebrow">GOODGRAIN GUIDE</p><h2>What sounds good?</h2></div><button id="close-chat" class="icon-button" aria-label="Close assistant">×</button></div><p class="chat-intro">Ask about the menu, ingredients or restaurant policies. I can help plan an order too.</p><div class="chat-session-row"><select id="session-select" aria-label="Chat history"><option value="">New conversation</option></select><button id="new-session" class="text-button" title="Start a new chat">＋ New</button></div><div id="chat-log" class="chat-log" aria-live="polite"><div class="assistant-message">Hi there. Want a quick recommendation, or have a question about our food?</div></div><div id="pending-action" class="pending-action" hidden></div><form id="chat-form" class="chat-form"><input id="chat-input" type="text" placeholder="Ask anything delicious…" maxlength="4000" autocomplete="off" required><button class="send-button" aria-label="Send message">↑</button></form><p id="chat-status" class="chat-status" role="status"></p></aside><div id="drawer-backdrop" class="drawer-backdrop"></div>
+
+  <dialog id="login-dialog" class="login-dialog"><form id="login-form" method="dialog"><button type="button" id="login-close" class="icon-button dialog-close" aria-label="Close sign in">×</button><p class="eyebrow">WELCOME BACK</p><h2>Pull up a chair.</h2><p class="login-hint">Sign in to place orders and keep your conversations.</p><label>Username<input id="username" name="username" autocomplete="username" required></label><label>Password<input id="password" name="password" type="password" autocomplete="current-password" required></label><p id="login-error" class="form-error" role="alert"></p><button class="button button-dark button-wide" type="submit">Sign in <span>↗</span></button><p class="demo-hint">Demo: customer1 / Customer123! &nbsp;·&nbsp; admin / Admin123!</p></form></dialog>
+
+  <footer><span class="brand"><span class="brand-mark">g.</span> goodgrain<span class="brand-dot">.</span></span><span>Cooked with a little more care.</span><a href="/docs">Developer API ↗</a></footer>
+  <script src="/static/script.js" defer></script>
+</body>
+</html>

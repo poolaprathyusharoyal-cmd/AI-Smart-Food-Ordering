@@ -1,0 +1,7 @@
+Delivery FAQ | Goodgrain fictional restaurant | Version 1 | Effective 2026-01-01
+
+Delivery is available within the demo service area. The application simulates order placement and does not connect to a real courier or payment processor.
+
+Estimated preparation time varies by dish and current kitchen volume. This demo does not provide live courier tracking. Check your order status in the application for kitchen progress.
+
+For help with an order, sign in and use the order history or ask the restaurant assistant. Only the account that placed an order can view or cancel it.

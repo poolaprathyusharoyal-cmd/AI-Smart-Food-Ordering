@@ -1,0 +1,7 @@
+Food Menu | Goodgrain fictional restaurant | Version 1 | Effective 2026-01-01
+
+Masala Dosa is a vegetarian breakfast dish, priced at INR 90 per portion. It is a crisp rice crepe with spiced potato filling.
+
+Paneer Biryani is a vegetarian main course, priced at INR 180 per portion. It is fragrant basmati rice with paneer.
+
+Menu prices and live availability are read from the application catalog. This document is a static guide and is not authoritative for current stock.

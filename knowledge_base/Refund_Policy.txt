@@ -1,0 +1,5 @@
+Refund Policy | Goodgrain fictional restaurant | Version 1 | Effective 2026-01-01
+
+The demo does not process payments, so no real payment or refund is made. If a simulated order is cancelled before preparation, its portions are restored to demo inventory.
+
+For a real restaurant transaction, consult the restaurant directly. This fictional project has no real billing or refund provider.

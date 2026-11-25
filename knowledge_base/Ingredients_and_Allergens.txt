@@ -1,0 +1,9 @@
+Ingredients and Allergens | Goodgrain fictional restaurant | Version 1 | Effective 2026-01-01
+
+Masala Dosa contains rice, lentils, potato, mustard seed, and curry leaves. It may contain traces of peanuts and tree nuts due to shared preparation surfaces.
+
+Paneer Biryani contains basmati rice, milk-based paneer, spices, and herbs. It contains milk. Shared kitchen cross-contact cannot be ruled out.
+
+Chole Bhature contains chickpeas, wheat flour, yogurt, and spices. It contains wheat and milk. Shared kitchen cross-contact cannot be ruled out.
+
+Please contact the restaurant before ordering if you have an allergy. Ingredient records are informational and the kitchen cannot guarantee allergen safety or absence of cross-contact.

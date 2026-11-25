@@ -1,0 +1,1 @@
+Fictional restaurant knowledge sources for the demo. TXT sources are included to keep the repository portable; the upload endpoint also accepts PDF and DOCX and extracts page/section references.
